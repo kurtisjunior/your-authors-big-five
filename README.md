@@ -12,7 +12,7 @@ and [IBM Watson's](https://developer.ibm.com/watson/)).
 
 ## Instructions
 
-1. Sign up to both Twitter's and IBM Watson's APIs. Create a 30 day free trial with IBM Bluemix. Spend some time reading about how they work.
+1. Sign up to both Twitter's and IBM Watson's APIs. Create a free trial account with IBM Bluemix. Spend some time reading about how they work. [Bluemix](https://console.bluemix.net/)
 
 2. Make authenticated requests, using Postman, to each of the APIs.
 
@@ -45,6 +45,7 @@ from your database)
   * Which dictator your tweets relate most to.
   * How close your personality is to one of your friends.
   * A website that takes a twitter handle, gets their last tweet and converts it into a audio file translated into another language.
+  * Reply to a twitter user with a different message depending on their personality stats from Watson
 
 This sprint is open-ended and is designed to make you:
 1. Get creative and try to think of what you achieve with these tools.
