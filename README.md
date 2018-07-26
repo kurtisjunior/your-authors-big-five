@@ -2,17 +2,18 @@
 
 ## Goals
 
-1. Create a RESTful API that uses Twitter and IBM Watson to deliver personality insights and translations of a Twitter user's tweets.
-2. Become comfortable using 3rd party APIs (such as [Twitter's](https://dev.twitter.com/rest/public)
-and [IBM Watson's](https://developer.ibm.com/watson/)).
-3. If you want to use callbacks, try out the [Async library](https://caolan.github.io/async/). Alternatively, carry on with Promises.
-4. Gain a better understanding of async in general as it relates to programming in JS.
-5. Manipulate data you receive back from 3rd party APIs
-6. Understand that servers can communicate with other servers too - it doesn't have to be client/server.
+1. Create a RESTful API that uses IBM Watson and another API to perform tasks such as personality insights and translations of a Twitter user's tweets. (Get creative!)
+2. Become comfortable using 3rd party APIs such as [IBM Watson's](https://developer.ibm.com/watson/)).
+3. Gain a better understanding of async in general as it relates to programming in JS.
+4. Manipulate data you receive back from 3rd party APIs
+5. Understand that servers can communicate with other servers too - it doesn't have to be client/server.
 
 ## Instructions
 
-1. Sign up to both Twitter's and IBM Watson's APIs. Create a free trial account with IBM Bluemix. Spend some time reading about how they work. [Bluemix](https://console.bluemix.net/)
+1. Sign up to [IBM Watson's](https://console.bluemix.net/) API. Create a free trial account with IBM Bluemix. Spend some time reading about how they work. [IBM Docs](https://console.bluemix.net/catalog/?search=label:lite&category=ai)
+
+
+2. Select a second API that you can use with one of the IBM Watson services. Twitter is a popular one, but feel free to use any others you think will be interesting such as [They Work For You](https://www.theyworkforyou.com/api/) and [Google Books](https://developers.google.com/books/docs/overview)
 
 2. Make authenticated requests, using Postman, to each of the APIs.
 
@@ -20,14 +21,14 @@ and [IBM Watson's](https://developer.ibm.com/watson/)).
 you can get hold of JS code that makes those requests for you (for use in
 your own code).
 
-4. Use the npm `twit` package to connect to Twitter from your server. See if you can send a tweet or get some tweet data to check you are connected correctly.
+4. If using Twitter: Use the npm `twit` package to connect to Twitter from your server. See if you can send a tweet or get some tweet data to check you are connected correctly.
 
-5. Use the npm package `watson-developer-cloud` to connect to IBM Watson's Personality Insights module from your server. Play around and see what you do with it. See if you can send it some tweets to analyse.
+5. Use the npm package `watson-developer-cloud` to connect to IBM Watson's Personality Insights module (*__or whichever module you have chosen to use!__*) from your server. Play around and see what you do with it. See if you can send it some information to analyse.
 
 6. Build out your API, thinking carefully about how you might make your endpoints RESTful. Aim to implement at least the following routes:
 
-  - a route that receives a Twitter username and returns the Big 5 personality insights for that username based on an analysis of their tweets
-  - a route that translates a user's tweets from one language to another
+  - a route that receives a data from an API and sends it to one of the Watson API services
+  - a route that uses two Watson API services
 
 Feel free to go further and explore what IMB Watson is capable of. It also has modules that work with images and analyse them, which could be fun.
 
@@ -50,7 +51,5 @@ from your database)
 This sprint is open-ended and is designed to make you:
 1. Get creative and try to think of what you achieve with these tools.
 2. To read through documentation and try to work out how to piece different apis together to achieve a desired outcome.
-
-We will not so much have a solution lecture for this Sprint but more a show and tell which is great practice for the project presentations. Bouncing ideas off each other is pretty imperative for this sprint so it is essential to work in pairs!
 
 Most importantly, Have fun!
