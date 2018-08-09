@@ -23,7 +23,7 @@ your own code).
 
 4. If using Twitter: Use the npm `twit` package to connect to Twitter from your server. See if you can send a tweet or get some tweet data to check you are connected correctly.
 
-5. Use the npm package `watson-developer-cloud` to connect to IBM Watson's Personality Insights module (*__or whichever module you have chosen to use!__*) from your server. Play around and see what you do with it. See if you can send it some information to analyse.
+5. Use the npm package [watson-developer-cloud](https://www.npmjs.com/package/watson-developer-cloud) to connect to IBM Watson's Personality Insights module (*__or whichever module you have chosen to use!__*) from your server. Play around and see what you do with it. See if you can send it some information to analyse.
 
 6. Build out your API, thinking carefully about how you might make your endpoints RESTful. Aim to implement at least the following routes:
 
