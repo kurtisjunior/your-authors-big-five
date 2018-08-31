@@ -13,7 +13,7 @@
 1. Sign up to [IBM Watson's](https://console.bluemix.net/) API. Create a free trial account with IBM Bluemix. Spend some time reading about how they work. [IBM Docs](https://console.bluemix.net/catalog/?search=label:lite&category=ai)
 
 
-2. Select a second API that you can use with one of the IBM Watson services. Twitter is a popular one, but feel free to use any others you think will be interesting such as [They Work For You](https://www.theyworkforyou.com/api/) and [Google Books](https://developers.google.com/books/docs/overview)
+2. Select a second API that you can use with one of the IBM Watson services. Feel free to use any others you think will be interesting such as [They Work For You](https://www.theyworkforyou.com/api/) and [Google Books](https://developers.google.com/books/docs/overview)
 
 2. Make authenticated requests, using Postman, to each of the APIs.
 
@@ -21,11 +21,9 @@
 you can get hold of JS code that makes those requests for you (for use in
 your own code).
 
-4. If using Twitter: Use the npm `twit` package to connect to Twitter from your server. See if you can send a tweet or get some tweet data to check you are connected correctly.
+4. Use the npm package [watson-developer-cloud](https://www.npmjs.com/package/watson-developer-cloud) to connect to IBM Watson's Personality Insights module (*__or whichever module you have chosen to use!__*) from your server. Play around and see what you do with it. See if you can send it some information to analyse.
 
-5. Use the npm package [watson-developer-cloud](https://www.npmjs.com/package/watson-developer-cloud) to connect to IBM Watson's Personality Insights module (*__or whichever module you have chosen to use!__*) from your server. Play around and see what you do with it. See if you can send it some information to analyse.
-
-6. Build out your API, thinking carefully about how you might make your endpoints RESTful. Aim to implement at least the following routes:
+5. Build out your API, thinking carefully about how you might make your endpoints RESTful. Aim to implement at least the following routes:
 
   - a route that receives a data from an API and sends it to one of the Watson API services
   - a route that uses two Watson API services
