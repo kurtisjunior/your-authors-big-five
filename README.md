@@ -41,7 +41,6 @@ Feel free to go further and explore what IMB Watson is capable of. It also has m
 * [Marvel Comics](https://developer.marvel.com/)
 * [Good Reads book reviews](https://www.goodreads.com/api)
 * [Twilio](https://www.twilio.com/)
-* [Pokemon API]()
 
 
 ## Some ideas for further development
