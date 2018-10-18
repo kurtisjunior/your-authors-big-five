@@ -1,10 +1,8 @@
 const apiRouter = require("express").Router();
 const newsRouter = require('../routes/newsRouter');
-const { insights } = require("../controllers/insights");
-
-apiRouter.route('/').get(insights);
+const testRouter = require('../routes/testRouter');
 
 apiRouter.use('/news', newsRouter);
-
+apiRouter.use('/test', testRouter);
 
 module.exports = apiRouter;

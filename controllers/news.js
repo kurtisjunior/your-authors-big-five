@@ -1,7 +1,7 @@
+const  { emotionAnalysis } = require('./watson');
 const request = require('superagent');
-const { KEY } = require('../config')
+const { KEY } = require('../config');
 const fs = require('fs');
-const {insights} = require('./insights');
 
 exports.getNews = (req, res, next) => {
   return request
@@ -12,15 +12,14 @@ exports.getNews = (req, res, next) => {
       parsedNews = parsedNews.reduce((acc, value, i, arr) => {
         acc.push({
           content : value.content,
-          contenttype: 'text/plain',
-          created: Date.now(),
-          id: `${i}`,
+          contenttype: 'application/json',
           language: 'en'
         })
         return acc
       }, [])
       fs.writeFile('./todaysNews.json', JSON.stringify(parsedNews), () => {
         console.log('written')
+        emotionAnalysis(JSON.stringify({news : parsedNews}));
       })
     })
 }
@@ -28,7 +27,5 @@ exports.getNews = (req, res, next) => {
 let x = {
 "content": 'a',
 "contenttype": "text/plain",
-"created": 1447639154000,
-"id": "666073008692314113",
 "language": "en"
 }

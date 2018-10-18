@@ -1,5 +1,5 @@
 const newsRouter = require('express').Router();
-const { getNews } = require('../controllers/newsController')
+const { getNews } = require('../controllers/news')
 
 newsRouter.route('/').get(getNews)
 
