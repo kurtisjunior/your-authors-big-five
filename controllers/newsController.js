@@ -1,17 +1,13 @@
-const NewsAPI = require('newsapi');
-const fs = require('fs')
-// const { KEY } = require('../config/index');
+const request = require('superagent');
+const { KEY } = require('../config')
+const fs = require('fs');
 
 exports.getNews = (req, res, next) => {
-  // console.log(KEY);
-  const newsapi = new NewsAPI(`ee70235faab2499e868c7212921593e9`)
-
-  newsapi.v2.topHeadlines({
-    sources: 'bbc-news',
-
-  }).then(res => {
-    fs.writeFile('./news.json', JSON.stringify(res, null, 2), () => {
-      console.log('news file written');
+  return request
+    .get(`https://newsapi.org/v2/top-headlines?country=${req.query.country}&apiKey=${KEY}`)
+    .then(news => {
+      fs.writeFile('./todaysNews.json', JSON.stringify(news, null, 2), () => {
+        console.log('written file success')
+      })
     })
-  });
 }
