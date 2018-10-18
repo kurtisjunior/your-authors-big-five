@@ -1,5 +1,5 @@
 const personalityInsights = require('../api/watson')
-
+const fs = require('fs');
 
 exports.insights = (req, res, next) => {
     const profileParams = {
@@ -11,10 +11,11 @@ exports.insights = (req, res, next) => {
 
     personalityInsights.profile(profileParams, (error, profile) => {
         if (error) res.send(error)
-        else res.send({ profile })
+        else {
+            res.send(JSON.stringify(profile, null, 2))
+            fs.writeFile('./profileAnalysed.json', JSON.stringify(profile, null, 2), () => {
+                console.log('file written');
+            })
+        }
     })
-
-
-
-
 }
