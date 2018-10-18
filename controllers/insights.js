@@ -3,7 +3,7 @@ const fs = require('fs');
 
 exports.insights = (req, res, next) => {
     const profileParams = {
-        content: require('../profile.json'),
+        content: require('../todaysNews.json'),
         'content_type': 'application/json',
         'consumption_preferences': true,
         'raw_scores': true
