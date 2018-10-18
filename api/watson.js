@@ -1,15 +1,12 @@
 var PersonalityInsightsV3 = require('watson-developer-cloud/personality-insights/v3');
 const { VERSION, USERNAME, PASSWORD, URL } = require('../config');
 
-
 var personalityInsights = new PersonalityInsightsV3({
     version: VERSION,
     username: USERNAME,
     password: PASSWORD,
     url: URL
 });
-
-
 
 module.exports = personalityInsights;
 
