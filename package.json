@@ -4,8 +4,9 @@
   "description": "## Goals",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon listen.js"
+    "start": "node listen.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+    // "dev": "nodemon listen.js"
   },
   "repository": {
     "type": "git",

@@ -5,17 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" media="screen" href="/main.css" />
-    <title>The result of your author is...</title>
+    <title>good reads</title>
 </head>
 
-<body>
+<body class='bodyClass'>
     <!-- can't write javascrip object in the middle of a html page -->
+    <h2>The result of your author is...</h2>
     <%result.forEach((element) => { %>
-        <div>
-            <%= element.trait_id %>
-                <%= element.raw_score %>
+        <div class='box'>
+            <h1><%= element.trait_id %></h1>
+            <p>raw score: <%= element.raw_score %></p>
         </div>
-        <% }) %>
+    <% }) %>
 </body>
 
 </html>
