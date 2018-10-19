@@ -2,7 +2,9 @@ const  { emotionalAnalysisModel } = require('../models/watson');
 
 exports.newsAnalysisModel = (news) => {
   return new Promise((resolve, reject) => {
+
     let parsedNews = JSON.parse(news.text).articles;
+
     parsedNews = parsedNews.reduce((acc, value) => {
       acc.push({
         content : value.content,
@@ -11,6 +13,9 @@ exports.newsAnalysisModel = (news) => {
       })
       return acc
     }, [])
+
     resolve(emotionalAnalysisModel(JSON.stringify(parsedNews)))
+
+    // cannot resolve until emotionalAnalysisModel is evaluated
   })
 }
