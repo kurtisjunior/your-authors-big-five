@@ -1,5 +1,5 @@
 const { newsAnalysisModel } = require('../models/news');
-const { KEY } = require('../config');
+const { VERSION, USERNAME, PASSWORD, URL } = process.env.NODE_ENV === 'production' ? process.env : require('../config');
 const request = require('superagent');
 const fs = require('fs');
 
@@ -11,7 +11,7 @@ exports.newsAnalysis = (req, res, next) => {
       res.send(analysedNews)
       return analysedNews
     })
-    .then(analysedNews => fs.writeFile(`./data/${req.query.country}-news.json`, JSON.stringify({[req.query.country] : analysedNews}, null, 2), () => console.log('file written sucessfully')))
+    .then(analysedNews => fs.writeFile(`./data/${req.query.country}-news.json`, JSON.stringify({ [req.query.country]: analysedNews }, null, 2), () => console.log('file written sucessfully')))
     .catch(next)
 }
 
