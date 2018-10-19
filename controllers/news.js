@@ -1,5 +1,5 @@
 const { newsAnalysisModel } = require('../models/news');
-const { VERSION, USERNAME, PASSWORD, URL } = process.env.NODE_ENV === 'production' ? process.env : require('../config');
+const { KEY } = process.env.NODE_ENV === 'production' ? process.env : require('../config');
 const request = require('superagent');
 const fs = require('fs');
 
