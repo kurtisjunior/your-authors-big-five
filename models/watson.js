@@ -16,5 +16,5 @@ exports.emotionalAnalysisModel = (data) => {
 
       // Promise is resolved when watson returns analysed data, once resolved model sends data to the model it was called in
     })
-  }) 
+  })
 }

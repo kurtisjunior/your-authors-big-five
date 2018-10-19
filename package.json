@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/northcoders/BE2-emotional-tweets#readme",
   "dependencies": {
+    "ejs": "^2.6.1",
     "express": "^4.16.4",
     "newsapi": "^2.4.0",
     "nodemon": "^1.18.4",
