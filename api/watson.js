@@ -1,5 +1,5 @@
 var PersonalityInsightsV3 = require('watson-developer-cloud/personality-insights/v3');
-const { VERSION, USERNAME, PASSWORD, URL } = require('../config');
+const { VERSION, USERNAME, PASSWORD, URL } = process.env.NODE_ENV === 'production' ? process.env : require('../config');
 
 var personalityInsights = new PersonalityInsightsV3({
     version: VERSION,
