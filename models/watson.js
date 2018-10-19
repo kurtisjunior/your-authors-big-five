@@ -14,7 +14,7 @@ exports.emotionalAnalysisModel = (data) => {
       if (error) reject(error)
       else resolve(profile)
 
-      // Promise is resolved when watson returns analysed data, once resolved model sends data to the controller
+      // Promise is resolved when watson returns analysed data, once resolved model sends data to the model it was called in
     })
   }) 
 }
