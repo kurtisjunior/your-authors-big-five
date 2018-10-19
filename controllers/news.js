@@ -1,31 +1,16 @@
-const  { emotionAnalysis } = require('./watson');
+const { newsAnalysisModel } = require('../models/news');
 const request = require('superagent');
 const { KEY } = require('../config');
 const fs = require('fs');
 
-exports.getNews = (req, res, next) => {
+exports.newsAnalysis = (req, res, next) => {
   return request
     .get(`https://newsapi.org/v2/top-headlines?country=${req.query.country}&apiKey=${KEY}`)
-    .then(news => {
-      let parsedNews = JSON.parse(news.text).articles;
-
-      parsedNews = parsedNews.reduce((acc, value, i, arr) => {
-        acc.push({
-          content : value.content,
-          contenttype: 'application/json',
-          language: 'en'
-        })
-        return acc
-      }, [])
-      fs.writeFile('./todaysNews.json', JSON.stringify(parsedNews), () => {
-        console.log('written')
-        emotionAnalysis(JSON.stringify({news : parsedNews}));
-      })
+    .then(news => newsAnalysisModel(news, req.query.country))
+    .then(analysedNews => {
+      res.send(analysedNews);
+      return analysedNews;
     })
-}
-
-let x = {
-"content": 'a',
-"contenttype": "text/plain",
-"language": "en"
+    .then(analysedNews => fs.writeFile(`./data/${req.query.country}-news.json`, JSON.stringify({[req.query.country] : analysedNews}, null, 2), () => console.log('file written sucessfully')))
+    .catch(next)
 }

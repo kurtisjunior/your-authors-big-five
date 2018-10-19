@@ -1,6 +1,6 @@
 const testRouter = require('express').Router();
-const { emotionAnalysis } = require('../controllers/watson');
+const { test } = require('../controllers/test');
 
-testRouter.route('/').get(emotionAnalysis);
+testRouter.route('/').get(test);
 
 module.exports = testRouter;
