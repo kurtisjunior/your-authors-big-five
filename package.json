@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node listen.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node listen.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -24,6 +23,7 @@
     "express": "^4.16.4",
     "newsapi": "^2.4.0",
     "nodemon": "^1.18.4",
+    "path": "^0.12.7",
     "pg-promise": "^8.5.0",
     "superagent": "^4.0.0-beta.5",
     "watson-developer-cloud": "^3.12.0"
