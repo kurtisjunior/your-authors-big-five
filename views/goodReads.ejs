@@ -1,22 +1,26 @@
-<html lang="en">
+<!-- Once the API data has been passed to Watson and ran through analysis it is then rendered to this HTML page
+    Javascript is then written into the HTML with EJS tags
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    href links some CSS styling 
+-->
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" type="text/css" media="screen" href="/main.css" />
     <title>good reads</title>
-</head>
+  </head>
 
-<body class='bodyClass'>
+  <body class="bodyClass">
     <!-- can't write javascrip object in the middle of a html page -->
     <h2>The result of your author is...</h2>
     <%result.forEach((element) => { %>
-        <div class='box'>
-            <h1><%= element.trait_id %></h1>
-            <p>raw score: <%= element.raw_score %></p>
-        </div>
+    <div class="box">
+      <h1><%= element.trait_id %></h1>
+      <p>raw score: <%= element.raw_score %></p>
+    </div>
     <% }) %>
-</body>
-
+  </body>
 </html>

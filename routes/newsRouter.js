@@ -1,6 +1,6 @@
-const newsRouter = require('express').Router();
-const { newsAnalysis } = require('../controllers/news')
+// const newsRouter = require("express").Router();
+// const { newsAnalysis } = require("../public/controllers/news");
 
-newsRouter.route('/').get(newsAnalysis)
+// newsRouter.route("/").get(newsAnalysis);
 
-module.exports = newsRouter;
+// module.exports = newsRouter;

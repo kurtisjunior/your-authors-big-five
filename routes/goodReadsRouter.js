@@ -1,6 +1,9 @@
-const goodReadsRouter = require('express').Router();
-const { authorAnalysis } = require('../controllers/goodReads');
+const goodReadsRouter = require("express").Router();
 
-goodReadsRouter.route('/').get(authorAnalysis)
+// goodReadsRouter.route("/").get(authorAnalysis);
 
-module.exports = goodReadsRouter
+goodReadsRouter.get("/", (req, res) => {
+  res.render("rateYourAuthor.html");
+});
+
+module.exports = goodReadsRouter;
