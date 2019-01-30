@@ -22,8 +22,7 @@ app.use(express.static("public"));
 
 module.exports = app;
 
-//render a search page
-//take input and feed into watson
-//render to the rate your authro page
-
-//two page app.
+//to do:
+//cannot read property of 0 of null - name or image match. write conditional to pass (maybe an edge case)
+// style the author page (nav bar and layout)
+// write some tests
