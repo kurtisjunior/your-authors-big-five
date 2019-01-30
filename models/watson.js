@@ -11,6 +11,11 @@ Fourth, it is then resolved or rejected. And passed back to the model that invok
 const personalityInsights = require("../api/watson");
 
 exports.emotionalAnalysisModel = data => {
+  data = JSON.parse(data);
+  const name = data.name;
+  const image = data.image;
+  data = JSON.stringify(data);
+
   return new Promise((resolve, reject) => {
     const profileParams = {
       content: data,
@@ -20,8 +25,13 @@ exports.emotionalAnalysisModel = data => {
     };
 
     personalityInsights.profile(profileParams, (error, profile) => {
-      if (error) reject(error);
-      else resolve(profile);
+      if (error) {
+        reject(error);
+      } else {
+        profile.name = name;
+        profile.image = image;
+        resolve(profile);
+      }
 
       // Promise is resolved when watson returns analysed data, once resolved model sends data to the model it was called in
     });

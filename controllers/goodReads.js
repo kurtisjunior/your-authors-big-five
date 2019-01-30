@@ -12,7 +12,6 @@ exports.authorAnalysis = (req, res, next) => {
       return res.body.toString();
     })
     .then(body => {
-      console.log(body);
       let id = body.match(/id=([^>#]*)/)[0];
       id = id.split("");
       id = id.filter(num => {
