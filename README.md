@@ -2,7 +2,7 @@
 
 Deployed app: https://emotionalauthors.herokuapp.com/api/authorHome
 
-This app uses the express framework to run a server in the MVC design pattern. Users can enter their favorite authors and recieve an IBM watson personality insight anlaysis. The result is displayed in a graph.
+This app uses the Goodreads API, express.js framework, and IBM watson in the MVC design pattern. Users can enter their favorite authors and recieve a personality insight anlaysis. The result is displayed in a graph.
 
 ### Prerequisites
 
