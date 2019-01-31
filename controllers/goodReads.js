@@ -26,7 +26,17 @@ exports.authorAnalysis = (req, res, next) => {
           return authorAnalysisModel(data.body + "");
         })
         .then(watsonData => {
-          const result = [watsonData.personality[1], watsonData.personality[4]];
+          const result = [
+            watsonData.personality[0],
+            watsonData.personality[1],
+            watsonData.personality[2],
+            watsonData.personality[3],
+            watsonData.personality[4],
+            watsonData.name,
+            watsonData.image
+          ];
+
+          console.log(result);
           res.render("goodReads.ejs", { result });
         });
     });
