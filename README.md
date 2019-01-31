@@ -1,6 +1,6 @@
 # How does your favorite author score ?
 
-Visit: https://emotionalauthors.herokuapp.com/api/authorHome
+Deployed app: https://emotionalauthors.herokuapp.com/api/authorHome
 
 This app uses the express framework to run a server in the MVC design pattern. Users can enter their favorite authors and recieve an IBM watson personality insight anlaysis. The result is displayed in a graph.
 
